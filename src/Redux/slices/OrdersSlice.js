@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { UserRole } from "./token";
-import { supabase } from "../../Supabase/SupabaseClient";
+import { supabase } from "../../supabase/SupabaseClient";
 
 // ✅ Fetch Orders - Admin gets all, Trader gets own
 export const getOrders = createAsyncThunk(

@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { supabase } from "../../Supabase/SupabaseClient";
+import { supabase } from "../../supabase/SupabaseClient";
 
 // ✅ تسجيل مستخدم جديد (Auth + users)
 export const UserRegister = createAsyncThunk(
