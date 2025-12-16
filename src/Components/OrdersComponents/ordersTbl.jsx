@@ -14,7 +14,7 @@ import DelegatorListModal from "../OrdersComponents/delegatorListModal";
 import Loading from "../globalComonents/loading";
 import { fetchOrderItems } from "../../Redux/slices/OrderItems";
 import { UserRole } from "../../Redux/slices/token";
-import { supabase } from "../../Supabase/SupabaseClient";
+import { supabase } from "../../Supabase/supabaseClient";
 import RowsPerPageSelector from "../globalComonents/RowsPerPageSelector";
 import EmptyState from "../Notfound/EmptyState";
 import ModalConfirm from "../UsersComponents/ModalConfirm";

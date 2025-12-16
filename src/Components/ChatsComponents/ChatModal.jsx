@@ -7,7 +7,7 @@ import {
     buildConversationId,
 } from "../../Redux/slices/messagesSlice";
 import "./ChatModal.css";
-import { supabase } from "../../Supabase/SupabaseClient";
+import { supabase } from "../../Supabase/supabaseClient";
 import Loading from "../globalComonents/loading";
 import avatar from "../../assets/Images/user.png";
 

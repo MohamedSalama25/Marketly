@@ -6,7 +6,7 @@ import OrdersFilter from "./SalesFilter";
 import { FaEye, FaPrint } from "react-icons/fa";
 import Loading from "../globalComonents/loading";
 import { UserRole } from "../../Redux/slices/token";
-import { supabase } from "../../Supabase/SupabaseClient";
+import { supabase } from "../../Supabase/supabaseClient";
 import RowsPerPageSelector from "../globalComonents/RowsPerPageSelector";
 import EmptyState from "../Notfound/EmptyState";
 

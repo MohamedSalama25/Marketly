@@ -1,4 +1,4 @@
-import { supabase } from "../Supabase/SupabaseClient";
+import { supabase } from "../Supabase/supabaseClient";
 
 export const uploadImagesToSupabase = async (files,store) => {
   const uploadedUrls = [];

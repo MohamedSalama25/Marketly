@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Form, Button, Col, Row, Modal } from "react-bootstrap";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { supabase } from "../../Supabase/SupabaseClient";
+import { supabase } from "../../Supabase/supabaseClient";
 import { uploadImagesToSupabase } from "../../Redux/uploadingImage";
 import { FaCamera, FaMapMarkerAlt } from "react-icons/fa";
 import styles from "../../css/AuthLayout.module.css";

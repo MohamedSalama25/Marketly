@@ -1,4 +1,4 @@
-import { supabase } from "../Supabase/SupabaseClient";
+import { supabase } from "../Supabase/supabaseClient";
 
 const TEMP_ID = "28fe037d-a829-4ecf-8f9d-2c1e4f492bba";
 

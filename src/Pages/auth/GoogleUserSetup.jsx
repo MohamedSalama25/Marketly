@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "../../Supabase/SupabaseClient";
+import { supabase } from "../../Supabase/supabaseClient";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import styles from "../../css/AuthLayout.module.css";
 

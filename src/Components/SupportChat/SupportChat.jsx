@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./SupportChat.css";
 import ChatDrawer from "./ChatDrawer";
-import { supabase } from "../../Supabase/SupabaseClient";
+import { supabase } from "../../Supabase/supabaseClient";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers } from "../../Redux/slices/Users";
 import SupportAvatar from "../../assets/Images/supportChat.png";

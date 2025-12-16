@@ -1,5 +1,5 @@
 // forgotPasswordFunctions.js
-import { supabase } from "./SupabaseClient";
+import { supabase } from "./supabaseClient";
 
 /**
  * إرسال كود OTP إلى البريد الإلكتروني

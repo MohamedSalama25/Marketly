@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "../../Supabase/SupabaseClient";
+import { supabase } from "../../Supabase/supabaseClient";
 import GoogleUserSetup from "./GoogleUserSetup";
 import Loading from "../../Components/globalComonents/loading";
 
