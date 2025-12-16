@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { supabase } from "../../supabase/SupabaseClient";
+import { supabase } from "../../Supabase/supabaseClient";
 import { UserRole } from "./token";
 
 // دالة واحدة لجلب عناصر الطلبات حسب الصلاحية

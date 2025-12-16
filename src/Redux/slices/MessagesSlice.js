@@ -1,6 +1,6 @@
 // Redux/slices/messagesSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { supabase } from "../../supabase/SupabaseClient";
+import { supabase } from "../../Supabase/supabaseClient";
 import { v5 as uuidv5 } from "uuid";
 
 const NAMESPACE = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
