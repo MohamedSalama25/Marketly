@@ -10,7 +10,7 @@ import CompaniesSlice from "./slices/CompaniesSlice";
 import delegatesSlice from "./slices/DelegatesSlice";
 import TokenSlice from "./slices/token";
 import complaintsSlice from "./slices/Complaints";
-import messagesSlice from "./slices/messagesSlice";
+import messagesSlice from "./slices/MessagesSlice";
 import testimonialsReducer  from "./slices/testimonialsSlice";
 
 export const Store = configureStore({
