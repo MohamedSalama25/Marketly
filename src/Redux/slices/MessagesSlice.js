@@ -1,4 +1,4 @@
-// Redux/slices/messagesSlice.js
+// Redux/slices/MessagesSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { supabase } from "../../Supabase/supabaseClient";
 import { v5 as uuidv5 } from "uuid";

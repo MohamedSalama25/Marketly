@@ -5,10 +5,9 @@ import {
     fetchMessages,
     sendMessage,
     buildConversationId,
-} from "../../Redux/slices/messagesSlice";
+} from "../../Redux/slices/MessagesSlice";
 import "./ChatModal.css";
 import { supabase } from "../../Supabase/supabaseClient";
-import Loading from "../globalComonents/loading";
 import avatar from "../../assets/Images/user.png";
 
 const SUPPORT_ADMIN_ID = "a157b1db-54c3-46e3-968c-b3e0be6f6392";
