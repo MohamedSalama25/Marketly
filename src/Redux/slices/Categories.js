@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { supabase } from "../../Supabase/SupabaseClient";
 
-
 export const GetCategories = createAsyncThunk(
   "categories/getCategories",
   async (_, { rejectWithValue }) => {
