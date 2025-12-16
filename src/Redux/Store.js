@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import usersSlice from "./Slices/Users";
+
 import categoriesSlice from "./Slices/Categories";
+import usersSlice from "./Slices/Users";
 import productSlice from "./Slices/ProductSlice";
 import ordersSlice from "./Slices/OrdersSlice";
 import orderItemsSlice from "./Slices/OrderItems";
@@ -9,7 +10,7 @@ import CompaniesSlice from "./Slices/CompaniesSlice";
 import delegatesSlice from "./Slices/DelegatesSlice";
 import TokenSlice from "./Slices/token";
 import complaintsSlice from "./Slices/Complaints";
-import messagesSlice from "./slices/messagesSlice";
+import messagesSlice from "./Slices/messagesSlice";
 import testimonialsReducer  from "./Slices/testimonialsSlice";
 
 export const Store = configureStore({
