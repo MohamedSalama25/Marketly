@@ -1,17 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import categoriesSlice from "./Slices/Categories";
-import usersSlice from "./Slices/Users";
-import productSlice from "./Slices/ProductSlice";
-import ordersSlice from "./Slices/OrdersSlice";
-import orderItemsSlice from "./Slices/OrderItems";
-import UnitsSlice from "./Slices/units";
-import CompaniesSlice from "./Slices/CompaniesSlice";
-import delegatesSlice from "./Slices/DelegatesSlice";
-import TokenSlice from "./Slices/token";
-import complaintsSlice from "./Slices/Complaints";
-import messagesSlice from "./Slices/messagesSlice";
-import testimonialsReducer  from "./Slices/testimonialsSlice";
+import categoriesSlice from "./slices/Categories";
+import usersSlice from "./slices/Users";
+import productSlice from "./slices/ProductSlice";
+import ordersSlice from "./slices/OrdersSlice";
+import orderItemsSlice from "./slices/OrderItems";
+import UnitsSlice from "./slices/units";
+import CompaniesSlice from "./slices/CompaniesSlice";
+import delegatesSlice from "./slices/DelegatesSlice";
+import TokenSlice from "./slices/token";
+import complaintsSlice from "./slices/Complaints";
+import messagesSlice from "./slices/messagesSlice";
+import testimonialsReducer  from "./slices/testimonialsSlice";
 
 export const Store = configureStore({
   reducer: {
