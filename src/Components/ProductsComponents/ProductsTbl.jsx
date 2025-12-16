@@ -6,14 +6,14 @@ import {
   deleteSelectedProduct,
   fetchProducts,
   updateProduct,
-} from "../../Redux/Slices/ProductSlice";
+} from "../../Redux/slices/ProductSlice";
 import ProductsFilter from "./ProductsFilter";
 import CustomMenu from "../globalComonents/CustomMenu";
 import ModalConfirm from "../UsersComponents/ModalConfirm";
 import EditProductModal from "../modalsComponents/EditProductModal";
 import Switch from "../globalComonents/Switch";
 import Loading from "../globalComonents/loading";
-import { UserRole } from "../../Redux/Slices/token";
+import { UserRole } from "../../Redux/slices/token";
 import RowsPerPageSelector from "../globalComonents/RowsPerPageSelector";
 import EmptyState from "../Notfound/EmptyState"; 
 

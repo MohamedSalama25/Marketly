@@ -6,7 +6,7 @@ import ReturnsFilter from "./ReturnsFilter";
 import CustomMenu from "../globalComonents/CustomMenu";
 import Loading from "../globalComonents/loading";
 import { supabase } from "../../Supabase/SupabaseClient";
-import { deleteOrder, getReturnOrders, updateOrder } from "../../Redux/Slices/OrdersSlice";
+import { deleteOrder, getReturnOrders, updateOrder } from "../../Redux/slices/OrdersSlice";
 import RowsPerPageSelector from "../globalComonents/RowsPerPageSelector";
 import EmptyState from "../Notfound/EmptyState";
 import NotificationModal from "../modalsComponents/NotificationModal";

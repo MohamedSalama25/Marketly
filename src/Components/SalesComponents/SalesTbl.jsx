@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../../css/Table.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getDoneOrders } from "../../Redux/Slices/OrdersSlice";
+import { getDoneOrders } from "../../Redux/slices/OrdersSlice";
 import OrdersFilter from "./SalesFilter";
 import { FaEye, FaPrint } from "react-icons/fa";
 import Loading from "../globalComonents/loading";
-import { UserRole } from "../../Redux/Slices/token";
+import { UserRole } from "../../Redux/slices/token";
 import { supabase } from "../../Supabase/SupabaseClient";
 import RowsPerPageSelector from "../globalComonents/RowsPerPageSelector";
 import EmptyState from "../Notfound/EmptyState";

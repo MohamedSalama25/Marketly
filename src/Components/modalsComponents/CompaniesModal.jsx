@@ -5,7 +5,7 @@ import PrimaryButton from "../globalComonents/PrimaryButton";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
-import { createCompany } from "../../Redux/Slices/CompaniesSlice";
+import { createCompany } from "../../Redux/slices/CompaniesSlice";
 import { uploadImagesToSupabase } from "../../Redux/uploadingImage";
 import { AiOutlineClose } from "react-icons/ai";
 

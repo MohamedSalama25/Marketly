@@ -1,6 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import ChatsPageHeader from "../Components/ChatsComponents/ChatsPageHeader";
-import { fetchUsers } from "../Redux/Slices/Users";
+import { fetchUsers } from "../Redux/slices/Users";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Loading from "../Components/globalComonents/loading";

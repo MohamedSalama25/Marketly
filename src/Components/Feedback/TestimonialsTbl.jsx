@@ -5,7 +5,7 @@ import {
   fetchTestimonials,
   updateTestimonial,
   deleteTestimonial,
-} from "../../Redux/Slices/testimonialsSlice";
+} from "../../Redux/slices/testimonialsSlice";
 import Loading from "../globalComonents/loading";
 import CustomMenu from "../globalComonents/CustomMenu";
 import ModalConfirm from "../UsersComponents/ModalConfirm";

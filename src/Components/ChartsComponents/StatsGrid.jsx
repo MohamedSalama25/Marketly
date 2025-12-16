@@ -2,7 +2,7 @@ import { Container, Row, Col, Card, ProgressBar } from "react-bootstrap";
 import { Car, DollarSign, Eye, Package, ShoppingCart, Users } from "lucide-react";
 import {  useSelector } from "react-redux";
 
-import { UserRole } from "../../Redux/Slices/token";
+import { UserRole } from "../../Redux/slices/token";
 
 import Loading from "../globalComonents/loading";
 

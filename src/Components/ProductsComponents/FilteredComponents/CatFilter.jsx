@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import PrimarySelector from '../../globalComonents/PrimarySelector'
 import { useDispatch, useSelector } from 'react-redux';
-import { GetCategories } from '../../../Redux/Slices/Categories';
+import { GetCategories } from '../../../Redux/slices/Categories';
 
 function GovernorateFilter({ selectedCat, setselectedCat }) {
 const dispatch=useDispatch();

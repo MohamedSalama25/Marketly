@@ -7,8 +7,8 @@ import * as Yup from 'yup';
 import debounce from 'lodash.debounce';
 import PrimaryButton from '../globalComonents/PrimaryButton';
 import { uploadImagesToSupabase } from '../../Redux/uploadingImage';
-import { createDelegate, fetchDelegates } from '../../Redux/Slices/DelegatesSlice';
-import { UserRole } from '../../Redux/Slices/token';
+import { createDelegate, fetchDelegates } from '../../Redux/slices/DelegatesSlice';
+import { UserRole } from '../../Redux/slices/token';
 import { AiOutlineClose } from 'react-icons/ai';
 import NotificationModal from './NotificationModal';
 

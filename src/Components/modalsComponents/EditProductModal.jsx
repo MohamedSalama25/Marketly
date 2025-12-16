@@ -4,10 +4,10 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { uploadImagesToSupabase } from '../../Redux/uploadingImage';
-import { GetCategories } from '../../Redux/Slices/Categories';
-import { GetUnits } from '../../Redux/Slices/units';
-import { fetchCompanies } from '../../Redux/Slices/CompaniesSlice';
-import { deleteImageFromStore, updateProduct } from '../../Redux/Slices/ProductSlice';
+import { GetCategories } from '../../Redux/slices/Categories';
+import { GetUnits } from '../../Redux/slices/units';
+import { fetchCompanies } from '../../Redux/slices/CompaniesSlice';
+import { deleteImageFromStore, updateProduct } from '../../Redux/slices/ProductSlice';
 
 const EditProductModal = ({ product, show, setShow }) => {
   const [images, setImages] = useState(product?.image ? [product.image] : []);

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ModalConfirm from "../UsersComponents/ModalConfirm";
 import { FormControl } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { updateUser } from "../../Redux/Slices/Users";
+import { updateUser } from "../../Redux/slices/Users";
 
 export default function PasswordChangeModal({ isOpen, userId, userName, onClose }) {
     const dispatch = useDispatch();

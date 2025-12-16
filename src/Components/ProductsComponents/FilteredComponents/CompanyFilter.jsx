@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import PrimarySelector from '../../globalComonents/PrimarySelector'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCompanies } from '../../../Redux/Slices/CompaniesSlice';
+import { fetchCompanies } from '../../../Redux/slices/CompaniesSlice';
 
 function RoleFilter({ selectedRole, setSelectedRole }) {
 

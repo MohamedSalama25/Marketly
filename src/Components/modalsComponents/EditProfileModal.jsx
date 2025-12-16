@@ -3,11 +3,11 @@ import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { updateUser } from '../../Redux/Slices/Users';
+import { updateUser } from '../../Redux/slices/Users';
 import { uploadImagesToSupabase, deleteImageFromStore } from '../../Redux/uploadingImage';
 import styles from '../../css/Modal.module.css';
 import { AiOutlineClose } from "react-icons/ai";
-import { GetToken } from '../../Redux/Slices/token';
+import { GetToken } from '../../Redux/slices/token';
 
 const DEFAULT_IMAGE = 'https://cdn-icons-png.flaticon.com/512/149/149071.png';
 

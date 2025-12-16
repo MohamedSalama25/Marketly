@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { clearAuthData } from "../../Redux/Slices/token";
+import { clearAuthData } from "../../Redux/slices/token";
 import { FaRocket } from "react-icons/fa";
 import "./nav.css";
 import { Link, useNavigate } from "react-router-dom";

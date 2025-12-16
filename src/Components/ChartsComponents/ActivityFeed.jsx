@@ -2,7 +2,7 @@ import { Clock, ShoppingCart, User } from "lucide-react";
 
 import moment from "moment";
 
-import { UserRole } from "../../Redux/Slices/token";
+import { UserRole } from "../../Redux/slices/token";
 import { useSelector } from "react-redux";
 
 function ActivityFeed() {

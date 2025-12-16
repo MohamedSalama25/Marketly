@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { uploadImagesToSupabase } from "../../Redux/uploadingImage";
-import { updateCompany } from "../../Redux/Slices/CompaniesSlice";
+import { updateCompany } from "../../Redux/slices/CompaniesSlice";
 
 const EditCompaniesModal = ({ company, show, setShow }) => {
   const dispatch = useDispatch();

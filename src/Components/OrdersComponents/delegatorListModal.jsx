@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Modal, Button, Badge, Spinner } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchDelegates } from '../../Redux/Slices/DelegatesSlice';
-import { getOrders, updateOrder } from '../../Redux/Slices/OrdersSlice';
+import { fetchDelegates } from '../../Redux/slices/DelegatesSlice';
+import { getOrders, updateOrder } from '../../Redux/slices/OrdersSlice';
 import avatar from "../../assets/Images/user.png"
 
 function DelegatorListModal({ show, Setshow, location }) {

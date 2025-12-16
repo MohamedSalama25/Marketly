@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import TestimonialCard from "./TestimonialCard";
-import { fetchTestimonials } from "./../../Redux/Slices/testimonialsSlice";
+import { fetchTestimonials } from "./../../Redux/slices/testimonialsSlice";
 import "./testimonials.css"; 
 function TestimonialsSection() {
   const dispatch = useDispatch();

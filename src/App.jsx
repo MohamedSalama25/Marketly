@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React, { lazy, Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { GetToken } from "./Redux/Slices/token";
+import { GetToken } from "./Redux/slices/token";
 import ProtectedDashboardRoute from "./Components/Authcomponent/protecteddashboardroute";
 import ProtectedAuthRoute from "./Components/Authcomponent/protectedauthroute";
 import Loading from "./Components/globalComonents/loading";

@@ -9,7 +9,7 @@ import styles from "../../css/AuthLayout.module.css";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import "../../css/global.css";
 import { useDispatch } from "react-redux";
-import { GetToken } from "../../Redux/Slices/token";
+import { GetToken } from "../../Redux/slices/token";
 
 const citiesByGovernorate = [
   "الإسكندرية",

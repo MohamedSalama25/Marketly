@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import UsersTbl from "../Components/UsersComponents/UsersTbl";
 import UsersFilter from "../Components/UsersComponents/UsersFilter";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../Redux/Slices/Users";
-import { updateUser, updateSelectedUsers, deleteUser } from "../Redux/Slices/Users";
+import { fetchUsers } from "../Redux/slices/Users";
+import { updateUser, updateSelectedUsers, deleteUser } from "../Redux/slices/Users";
 import UsersPageHeader from "../Components/UsersComponents/usersPageHeader";
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
-// import { sendMessage } from "../Redux/Slices/MessagesSlice";
+// import { sendMessage } from "../Redux/slices/MessagesSlice";
 import Loading from "../Components/globalComonents/loading";
-import { UserRole } from "../Redux/Slices/token";
+import { UserRole } from "../Redux/slices/token";
 
 
 export default function UsersPage() {

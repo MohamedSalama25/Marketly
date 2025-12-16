@@ -5,15 +5,15 @@ import {
     getOrders,
     deleteOrder,
     updateOrder,
-} from "../../Redux/Slices/OrdersSlice";
+} from "../../Redux/slices/OrdersSlice";
 import OrdersFilter from "./OrdersFilter";
 import CustomMenu from "../globalComonents/CustomMenu";
 import LabeledMenu from "../globalComonents/LabeledMenu";
 import { FaEye, FaPrint } from "react-icons/fa";
 import DelegatorListModal from "../OrdersComponents/delegatorListModal";
 import Loading from "../globalComonents/loading";
-import { fetchOrderItems } from "../../Redux/Slices/OrderItems";
-import { UserRole } from "../../Redux/Slices/token";
+import { fetchOrderItems } from "../../Redux/slices/OrderItems";
+import { UserRole } from "../../Redux/slices/token";
 import { supabase } from "../../Supabase/SupabaseClient";
 import RowsPerPageSelector from "../globalComonents/RowsPerPageSelector";
 import EmptyState from "../Notfound/EmptyState";

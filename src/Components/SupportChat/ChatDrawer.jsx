@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./ChatDrawer.css";
 import { supabase } from "../../Supabase/SupabaseClient";
-import { buildConversationId } from "../../Redux/Slices/messagesSlice";
+import { buildConversationId } from "../../Redux/slices/messagesSlice";
 import SupportAvatar from "../../assets/Images/supportChat.png"
 
 // 🛠️ ثابت للدعم الفني (لو حبيت تغيره فيما بعد)

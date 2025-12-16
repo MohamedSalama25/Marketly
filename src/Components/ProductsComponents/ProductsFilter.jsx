@@ -5,7 +5,7 @@ import NameSearch from "./FilteredComponents/NameSearch";
 import EmailSearch from "./FilteredComponents/TraderSearch";
 import PrimaryButton from "../globalComonents/PrimaryButton";
 import TraderSearch from "./FilteredComponents/TraderSearch";
-import { UserRole } from "../../Redux/Slices/token";
+import { UserRole } from "../../Redux/slices/token";
 
 function ProductsFilter({
   searchName,

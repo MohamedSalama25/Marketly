@@ -6,7 +6,7 @@ import PrimaryButton from '../globalComonents/PrimaryButton';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { UserRegister } from '../../Redux/Slices/Users';
+import { UserRegister } from '../../Redux/slices/Users';
 import { uploadImagesToSupabase } from '../../Redux/uploadingImage'; // نفس الدالة
 
 

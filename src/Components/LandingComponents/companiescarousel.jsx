@@ -6,7 +6,7 @@ import SwiperCore from 'swiper';
 import { Autoplay } from 'swiper/modules';
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCompanies } from './../../Redux/Slices/CompaniesSlice';
+import { fetchCompanies } from './../../Redux/slices/CompaniesSlice';
 
 
 

@@ -4,10 +4,10 @@ import ChartSection from "../Components/ChartsComponents/ChartSection";
 import StatsGrid from "../Components/ChartsComponents/StatsGrid";
 import TableSection from "../Components/ChartsComponents/TableSection";
 import { useDispatch, useSelector } from "react-redux";
-import { getOrders } from "../Redux/Slices/OrdersSlice";
-import { fetchProducts } from "../Redux/Slices/ProductSlice";
-import { fetchUsers } from "../Redux/Slices/Users";
-import { fetchDelegates } from "../Redux/Slices/DelegatesSlice";
+import { getOrders } from "../Redux/slices/OrdersSlice";
+import { fetchProducts } from "../Redux/slices/ProductSlice";
+import { fetchUsers } from "../Redux/slices/Users";
+import { fetchDelegates } from "../Redux/slices/DelegatesSlice";
 
 function Charts() {
   const dispatch = useDispatch();

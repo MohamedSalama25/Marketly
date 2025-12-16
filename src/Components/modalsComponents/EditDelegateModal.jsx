@@ -7,8 +7,8 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import debounce from 'lodash.debounce';
 import { uploadImagesToSupabase } from '../../Redux/uploadingImage';
-import { updateDelegate } from '../../Redux/Slices/DelegatesSlice';
-import { UserRole } from '../../Redux/Slices/token';
+import { updateDelegate } from '../../Redux/slices/DelegatesSlice';
+import { UserRole } from '../../Redux/slices/token';
 
 /* 🗺️ المحافظات الثابتة */
 const governorates = [

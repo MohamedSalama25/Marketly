@@ -5,7 +5,7 @@ import {
     fetchMessages,
     sendMessage,
     buildConversationId,
-} from "../../Redux/Slices/messagesSlice";
+} from "../../Redux/slices/messagesSlice";
 import "./ChatModal.css";
 import { supabase } from "../../Supabase/SupabaseClient";
 import Loading from "../globalComonents/loading";

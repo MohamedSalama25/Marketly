@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import "../../css/Table.css";
 import { useDispatch, useSelector } from "react-redux";
 import ModalConfirm from "../UsersComponents/ModalConfirm";
-import { fetchOrderItems } from "../../Redux/Slices/OrderItems";
+import { fetchOrderItems } from "../../Redux/slices/OrderItems";
 import BestProFilter from "./bestProFilter";
 import Loading from "../globalComonents/loading";
-import { UserRole } from "../../Redux/Slices/token";
+import { UserRole } from "../../Redux/slices/token";
 import RowsPerPageSelector from "../globalComonents/RowsPerPageSelector";
 import EmptyState from "../Notfound/EmptyState";
 

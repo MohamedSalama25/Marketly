@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Modal, Button, Form, Row, Col, Badge } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { updateUser } from "../../Redux/Slices/Users";
+import { updateUser } from "../../Redux/slices/Users";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import PrimaryButton from "../globalComonents/PrimaryButton";

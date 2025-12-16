@@ -5,8 +5,8 @@ import {
   fetchDelegates,
   updateDelegate,
   deleteDelegate,
-} from "../Redux/Slices/DelegatesSlice";
-import { fetchUsers } from "../Redux/Slices/Users";
+} from "../Redux/slices/DelegatesSlice";
+import { fetchUsers } from "../Redux/slices/Users";
 
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
@@ -16,7 +16,7 @@ import DelegatesFilter from "../Components/DelegatesComponents/DelegatesFilter";
 import DelegatesTbl from "../Components/DelegatesComponents/DelegatesTbl";
 import EditDelegateModal from "../Components/modalsComponents/EditDelegateModal";
 import Loading from "../Components/globalComonents/loading";
-import { UserRole } from "../Redux/Slices/token";
+import { UserRole } from "../Redux/slices/token";
 
 export default function DelegatesPage() {
   const dispatch = useDispatch();

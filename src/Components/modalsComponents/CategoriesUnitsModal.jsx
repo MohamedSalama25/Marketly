@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { uploadImagesToSupabase } from "../../Redux/uploadingImage";
-import { AddCategory } from "../../Redux/Slices/Categories";
-import { AddUnit } from "../../Redux/Slices/units";
+import { AddCategory } from "../../Redux/slices/Categories";
+import { AddUnit } from "../../Redux/slices/units";
 import { AiOutlineClose } from "react-icons/ai";
 
 const CategoriesUnitsModal = ({ type, onAdd }) => {

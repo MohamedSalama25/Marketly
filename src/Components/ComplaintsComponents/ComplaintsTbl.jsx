@@ -6,8 +6,8 @@ import CustomMenu from "../globalComonents/CustomMenu";
 import ModalConfirm from "../UsersComponents/ModalConfirm";
 
 import Loading from "../globalComonents/loading";
-import { UserRole } from "../../Redux/Slices/token";
-import { deleteComplaint, fetchcomplaints, updateComplaint } from "../../Redux/Slices/Complaints";
+import { UserRole } from "../../Redux/slices/token";
+import { deleteComplaint, fetchcomplaints, updateComplaint } from "../../Redux/slices/Complaints";
 import ComplaintsFilter from "./ComplaintsFilter";
 import RowsPerPageSelector from "../globalComonents/RowsPerPageSelector";
 import EmptyState from "../Notfound/EmptyState";

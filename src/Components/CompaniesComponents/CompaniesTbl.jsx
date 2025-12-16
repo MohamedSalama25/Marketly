@@ -4,14 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   deleteCompany,
   fetchCompanies,
-} from "../../Redux/Slices/CompaniesSlice";
+} from "../../Redux/slices/CompaniesSlice";
 import CompaniesFilter from "./CompaniesFilter";
 import EditCompaniesModal from "../modalsComponents/EditCompaniesModal";
 import CustomMenu from "../globalComonents/CustomMenu";
 import ModalConfirm from "../UsersComponents/ModalConfirm";
 import { deleteImageFromStore } from "../../Redux/uploadingImage";
 import Loading from "../globalComonents/loading";
-import { UserRole } from "../../Redux/Slices/token";
+import { UserRole } from "../../Redux/slices/token";
 import RowsPerPageSelector from "../globalComonents/RowsPerPageSelector";
 import NotificationModal from "../modalsComponents/NotificationModal";
 

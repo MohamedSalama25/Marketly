@@ -3,7 +3,7 @@ import "./SupportChat.css";
 import ChatDrawer from "./ChatDrawer";
 import { supabase } from "../../Supabase/SupabaseClient";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../../Redux/Slices/Users";
+import { fetchUsers } from "../../Redux/slices/Users";
 import SupportAvatar from "../../assets/Images/supportChat.png";
 
 const SUPPORT_ADMIN_ID = "a157b1db-54c3-46e3-968c-b3e0be6f6392";

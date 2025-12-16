@@ -4,7 +4,7 @@ import ModalConfirm from "../UsersComponents/ModalConfirm";
 import RouteDetailsModal from "../DelegatesComponents/RouteDetailsModal";
 import CustomMenu from "../globalComonents/CustomMenu";
 import LabeledMenu from "../globalComonents/LabeledMenu";
-import { UserRole } from "../../Redux/Slices/token";
+import { UserRole } from "../../Redux/slices/token";
 import "../../css/Table.css";
 import RowsPerPageSelector from "../globalComonents/RowsPerPageSelector";
 import PasswordChangeModal from "./PasswordChangeModal";

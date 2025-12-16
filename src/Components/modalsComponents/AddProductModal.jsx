@@ -5,12 +5,12 @@ import PrimaryButton from '../globalComonents/PrimaryButton';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { createProduct } from '../../Redux/Slices/ProductSlice';
+import { createProduct } from '../../Redux/slices/ProductSlice';
 import { uploadImagesToSupabase } from '../../Redux/uploadingImage';
-import { GetCategories } from '../../Redux/Slices/Categories';
-import { GetUnits } from '../../Redux/Slices/units';
-import { fetchCompanies } from '../../Redux/Slices/CompaniesSlice';
-import { UserRole } from '../../Redux/Slices/token';
+import { GetCategories } from '../../Redux/slices/Categories';
+import { GetUnits } from '../../Redux/slices/units';
+import { fetchCompanies } from '../../Redux/slices/CompaniesSlice';
+import { UserRole } from '../../Redux/slices/token';
 
 const AddProductModal = () => {
   const [images, setImages] = useState([]);
