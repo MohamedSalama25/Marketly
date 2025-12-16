@@ -25,7 +25,7 @@ const UploadShopImage = () => {
           md={4}
           className={`d-none d-md-flex align-items-center justify-content-center rounded-3 ${styles.signupImageSection}`}
         >
-          <img src='src/assets/Logo/Asset 11.svg' alt="شعار" className={styles.signupSideImg} />
+          <img src='Logo/Asset 11.svg' alt="شعار" className={styles.signupSideImg} />
         </Col>
 
         <Col md={7}>

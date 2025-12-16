@@ -55,7 +55,7 @@ function Layout() {
           <div className="offcanvas-header p-0 mt-2">
             <img
               style={{ width: "120px", height: "60px" }}
-              src='../../src/assets/Logo/Asset 1.svg'
+              src='../.Logo/Asset 1.svg'
               alt="Logo"
             />
           </div>

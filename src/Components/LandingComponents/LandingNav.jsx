@@ -34,7 +34,7 @@ const LandingNavbar = ({ token }) => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <img src="src/assets/Logo/Asset 1.svg"
+          <img src="Logo/Asset 1.svg"
            alt="Marketly Logo"
            style={{ width: "100px", height: "auto" }} />
         </a>

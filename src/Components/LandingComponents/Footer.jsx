@@ -40,7 +40,7 @@ const Footer = () => {
                 letterSpacing: "0.5px",
               }}
             >
-              <img src="src/assets/Logo/Asset 1.svg"
+              <img src="Logo/Asset 1.svg"
                 alt="Marketly Logo"
                 style={{ width: "80px", height: "auto" }} />
             </h4>
