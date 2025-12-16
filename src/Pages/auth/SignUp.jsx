@@ -231,7 +231,7 @@ const SignUp = () => {
     <div className={styles.signupPage}>
       <Row className="g-0 justify-content-center align-items-center min-vh-100">
         <Col md={4} className={`d-none d-md-flex align-items-center justify-content-center ${styles.signupImageSection}`}>
-          <img src='Logo/Asset 11.svg' alt="شعار" className={styles.signupSideImg} />
+          <img src='/Logo/Asset 11.svg' alt="شعار" className={styles.signupSideImg} />
         </Col>
 
         <Col md={7}>
