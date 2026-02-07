@@ -5,7 +5,7 @@ import LandingNav from "../Components/LandingComponents/LandingNav";
 import Footer from "../Components/LandingComponents/Footer";
 import DownloadSection from "../Components/LandingComponents/DownLoadSection";
 import ScrollToTopButton from "../Components/LandingComponents/ScrollToTopButton";
-import SupportChat from "../Components/SupportChat/SupportChat";
+import { AIAssistant } from "../Components/assistant/AIAssistant";
 import { useSelector } from "react-redux";
 import CompaniesCarousel from "../Components/LandingComponents/companiescarousel";
 import TestimonialsSection from "../Components/LandingComponents/TestimonialsSection";
@@ -25,7 +25,7 @@ function Landing() {
         <TestimonialsSection />
       </div>
       <ScrollToTopButton />
-      {UserRole !== "admin" && <SupportChat />}
+      {UserRole !== "admin" && <AIAssistant />}
       <Footer/>
     </>
   );

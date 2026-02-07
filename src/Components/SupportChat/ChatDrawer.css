@@ -1,11 +1,11 @@
 .chat-drawer-container {
     position: fixed;
-    bottom: 135px;
+    bottom: 90px;
     left: 40px;
     width: 85vw;
     /* ← responsive width */
     max-width: 450px;
-    max-height: 450px;
+    max-height: 700px;
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
@@ -36,7 +36,7 @@
 }
 
 .chat-messages {
-    height: 300px;
+    height: 550px;
     padding: 10px;
     overflow-y: auto;
     display: flex;
@@ -84,7 +84,8 @@
     cursor: pointer;
     transition: 0.3s;
     /*border-radius: 20px;
-    */-webkit-transition: 2s;
+    */
+    -webkit-transition: 2s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
