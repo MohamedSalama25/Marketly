@@ -158,7 +158,7 @@ export async function deleteImageFromStore(imageUrl) {
   if (!imageUrl) return;
 
   try {
-    const storageBase = "https://auxwhdusfpgyzbwgjize.supabase.co/storage/v1/object/public/products/";
+    const storageBase = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/products/`;
 
     if (!imageUrl.startsWith(storageBase)) {
       console.warn("الرابط لا ينتمي لمجلد التخزين المتوقّع");

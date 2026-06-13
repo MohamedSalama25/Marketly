@@ -8,7 +8,6 @@ import { supabase } from "../../Supabase/supabaseClient";
 import { GetToken } from "../../Redux/slices/token";
 import styles from "../../css/AuthLayout.module.css";
 import "../../css/global.css";
-import Logo from "../../assets/Images/Logo.png";
 import ForgotPasswordModal from "./ForgetPasswordModal";
 
 const SigninPage = () => {
@@ -66,7 +65,8 @@ const SigninPage = () => {
           return;
         }
 
-        localStorage.removeItem("sb-auxwhdusfpgyzbwgjize-auth-token");
+        const projectRef = new URL(import.meta.env.VITE_SUPABASE_URL).host.split(".")[0];
+        localStorage.removeItem(`sb-${projectRef}-auth-token`);
 
         if (user.role === "admin" || user.role === "trader") {
           navigate("/Dashboard/Charts");
@@ -148,9 +148,8 @@ const SigninPage = () => {
                         className="py-2"
                       />
                       <i
-                        className={`fas ${
-                          showPassword ? "fa-eye-slash" : "fa-eye"
-                        } position-absolute`}
+                        className={`fas ${showPassword ? "fa-eye-slash" : "fa-eye"
+                          } position-absolute`}
                         onClick={togglePasswordVisibility}
                         style={{
                           left: "10px",
