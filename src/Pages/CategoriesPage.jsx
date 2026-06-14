@@ -12,9 +12,9 @@ import ModalConfirm from "../Components/UsersComponents/ModalConfirm";
 import { DeleteUnit } from "../Redux/slices/units";
 import { DeleteCategory } from "../Redux/slices/Categories";
 import CategoriesPageHeader from "../Components/CategoriesComponents/CategoriesPageHeader";
-import { UserRole } from "../Redux/slices/token";
 import RowsPerPageSelector from "../Components/globalComonents/RowsPerPageSelector";
 import NotificationModal from "../Components/modalsComponents/NotificationModal";
+import EditCategoryModal from "../Components/modalsComponents/EditCategoryModal";
 // const rowsPerPage = 5;
 
 function Categories() {
@@ -22,6 +22,8 @@ function Categories() {
   const [flag, setFlag] = useState("categories");
   const { categories, loading } = useSelector((state) => state.Categories);
   const { Units } = useSelector((state) => state.Units);
+  const { UserRole } = useSelector((state) => state.Token);
+  const isAdmin = UserRole === "admin";
 
   // Search & selection state
   const [searchName, setSearchName] = useState("");
@@ -32,6 +34,10 @@ function Categories() {
     confirmText: "تأكيد",
     confirmClass: "btn-primary",
     onConfirm: () => { },
+  });
+  const [editModal, setEditModal] = useState({
+    open: false,
+    category: null,
   });
 
   // Pagination state
@@ -100,6 +106,8 @@ function Categories() {
 
   // Delete
   const handleDeleteRow = (row) => {
+    if (!isAdmin) return;
+
     setConfirmModal({
       open: true,
       message: `هل تريد حذف ${row.name}؟`,
@@ -118,6 +126,8 @@ function Categories() {
     });
   };
   const handleDeleteSelected = () => {
+    if (!isAdmin) return;
+
     if (selectedRows.length === 0) {
       setNotification({
         isOpen: true,
@@ -152,9 +162,15 @@ function Categories() {
     else dispatch(GetUnits());
   };
 
+  const handleEditCategory = (category) => {
+    if (!isAdmin) return;
+    setEditModal({ open: true, category });
+  };
+
   // Table columns
   const columns = [
-    {
+    ...(isAdmin
+      ? [{
       header: (
         <label className="checkbox-wrapper">
           <input
@@ -177,7 +193,8 @@ function Categories() {
           />
         </label>
       ),
-    },
+    }]
+      : []),
     ...(flag === "categories"
       ? [
         {
@@ -195,7 +212,8 @@ function Categories() {
       : []),
     { header: "الاسم", accessor: "name" },
     { header: "المعرف", accessor: "id" },
-    {
+    ...(isAdmin
+      ? [{
       header: (
         <CustomMenu
           id="bulk-actions"
@@ -215,6 +233,16 @@ function Categories() {
         <CustomMenu
           id={row.id}
           options={[
+            ...(flag === "categories"
+              ? [
+                {
+                  label: "تعديل",
+                  icon: "fa-solid fa-pen",
+                  color: "#0d6efd",
+                  onClick: () => handleEditCategory(row),
+                },
+              ]
+              : []),
             {
               label: "حذف",
               icon: "fa-solid fa-trash",
@@ -224,7 +252,8 @@ function Categories() {
           ]}
         />
       ),
-    },
+    }]
+      : []),
   ];
   
   const label = flag === "categories" ? "صنف" : "وحدة";
@@ -245,6 +274,7 @@ function Categories() {
             title={flag === "categories" ? "الأصناف" : "الوحدات"}
             flag={flag}
             onAdd={handleAdd}
+            isAdmin={isAdmin}
           />
           <div className="d-flex justify-content-between gap-4 align-items-center">
             <div className="mt-2 px-2" style={{ Width: 500 }}>
@@ -370,6 +400,12 @@ function Categories() {
               isOpen={notification.isOpen}
               message={notification.message}
               onClose={() => setNotification({ isOpen: false, message: "" })}
+            />
+            <EditCategoryModal
+              show={editModal.open}
+              category={editModal.category}
+              onHide={() => setEditModal({ open: false, category: null })}
+              onUpdated={handleAdd}
             />
         </div>
       )}

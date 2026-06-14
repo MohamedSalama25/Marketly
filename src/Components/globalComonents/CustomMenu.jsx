@@ -88,9 +88,11 @@ function CustomMenu({id="", options=[]}) {
                     <li key={index}>
                         <button
                             onClick={() => {
+                                if (option.disabled) return;
                                 option.onClick();
                                 setOpenIndex(null);
                             }}
+                            disabled={option.disabled}
                             className="custom-btn-menuInTbl"
                         >
                             <span style={{ color: `${option.color}`, marginLeft:"0px" }} className={option.icon}></span>

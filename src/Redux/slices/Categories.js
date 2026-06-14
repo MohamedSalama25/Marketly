@@ -17,8 +17,12 @@ export const GetCategories = createAsyncThunk(
 
 export const AddCategory = createAsyncThunk(
     "categories/addCategory",
-    async (categoryData, { rejectWithValue }) => {
+    async (categoryData, { rejectWithValue, getState }) => {
         try {
+        const role = getState().Token?.UserRole;
+        if (role !== "admin") {
+          throw new Error("غير مسموح بإضافة الأصناف إلا للأدمن");
+        }
         const { data, error } = await supabase.from("categories").insert(categoryData).select();
         if (error) throw error;
         return data[0]; 
@@ -31,9 +35,12 @@ export const AddCategory = createAsyncThunk(
 
 export const UpdateCategory = createAsyncThunk(
     "categories/updateCategory",
-    async ({ id, updatedData }, { rejectWithValue }) => {
+    async ({ id, updatedData }, { rejectWithValue, getState }) => {
         try {
-            console.log(updatedData);
+            const role = getState().Token?.UserRole;
+            if (role !== "admin") {
+              throw new Error("غير مسموح بتعديل الأصناف إلا للأدمن");
+            }
 
             const { data, error } = await supabase.from("categories").update(updatedData).eq("id", id).select();
             if (error) throw error;
@@ -47,8 +54,12 @@ export const UpdateCategory = createAsyncThunk(
 
 export const DeleteCategory = createAsyncThunk(
     "categories/deleteCategory",
-    async (id, { rejectWithValue }) => {
+    async (id, { rejectWithValue, getState }) => {
         try {
+            const role = getState().Token?.UserRole;
+            if (role !== "admin") {
+              throw new Error("غير مسموح بحذف الأصناف إلا للأدمن");
+            }
             const { error } = await supabase.from("categories").delete().eq("id", id);
             if (error) throw error;
             return id;
