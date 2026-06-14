@@ -4,6 +4,36 @@ import { supabase } from "../../Supabase/supabaseClient";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import styles from "../../css/AuthLayout.module.css";
 
+const citiesByGovernorate = [
+  "الإسكندرية",
+  "الإسماعيلية",
+  "الأقصر",
+  "البحر الأحمر",
+  "البحيرة",
+  "الجيزة",
+  "الدقهلية",
+  "السويس",
+  "الشرقية",
+  "الغربية",
+  "الفيوم",
+  "القاهرة",
+  "القليوبية",
+  "المنوفية",
+  "المنيا",
+  "الوادي الجديد",
+  "بني سويف",
+  "بورسعيد",
+  "جنوب سيناء",
+  "دمياط",
+  "سوهاج",
+  "شمال سيناء",
+  "قنا",
+  "كفر الشيخ",
+  "مطروح",
+  "أسوان",
+  "أسيوط"
+];
+
 function GoogleUserSetup() {
   const navigate = useNavigate();
   const [googleUser, setGoogleUser] = useState(null);
@@ -120,15 +150,20 @@ function GoogleUserSetup() {
             </Form.Group>
             <Form.Group className={styles.formGroup} controlId="governorate">
               <Form.Label className={styles.formLabel}>المحافظة</Form.Label>
-              <Form.Control
-                type="text"
+              <Form.Select
                 name="governorate"
                 value={formData.governorate}
                 onChange={handleChange}
-                placeholder="المحافظة"
                 className="py-2"
                 required
-              />
+              >
+                <option value="">اختر المحافظة</option>
+                {citiesByGovernorate.map((gov) => (
+                  <option key={gov} value={gov}>
+                    {gov}
+                  </option>
+                ))}
+              </Form.Select>
             </Form.Group>
             <Form.Group className={styles.formGroup} controlId="location">
               <Form.Label className={styles.formLabel}>

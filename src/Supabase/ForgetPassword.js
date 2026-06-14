@@ -2,16 +2,16 @@
 import { supabase } from "./supabaseClient";
 
 /**
- * إرسال كود OTP إلى البريد الإلكتروني
+ * إرسال كود استعادة كلمة المرور إلى البريد
  */
 export const sendOtpToEmail = async (email) => {
   try {
-    const { error } = await supabase.auth.signInWithOtp({ email });
+    const { error } = await supabase.auth.resetPasswordForEmail(email);
 
     if (error) {
       return {
         success: false,
-        message: "تأكد من أن البريد مسجل بالفعل!",
+        message: "حدث خطأ أثناء إرسال كود التحقق.",
         details: error.message,
       };
     }
@@ -30,14 +30,14 @@ export const sendOtpToEmail = async (email) => {
 };
 
 /**
- * التحقق من كود OTP المُرسل للبريد
+ * التحقق من كود OTP الخاص باستعادة كلمة المرور
  */
 export const verifyOtp = async (email, token) => {
   try {
     const { data, error } = await supabase.auth.verifyOtp({
       email,
       token,
-      type: "email",
+      type: "recovery",
     });
 
     if (error) {
@@ -62,37 +62,20 @@ export const verifyOtp = async (email, token) => {
   }
 };
 
-
 /**
  * تحديث كلمة المرور بعد التحقق من الكود
  */
-export const updatePassword = async (email, newPassword) => {
+export const updatePassword = async (newPassword) => {
   try {
-    // ابحث عن المستخدم بالـ email
-    const { data: userData, error: userError } = await supabase
-      .from("users")
-      .select("id")
-      .eq("email", email)
-      .single();
+    const { error } = await supabase.auth.updateUser({
+      password: newPassword,
+    });
 
-    if (userError || !userData) {
-      return {
-        success: false,
-        message: "هذا البريد غير مسجل.",
-      };
-    }
-
-    // نفترض أنك بتخزن الباسورد كنص عادي، أو تقدر تضيف تشفير هنا لو عايز
-    const { error: updateError } = await supabase
-      .from("users")
-      .update({ password: newPassword })
-      .eq("id", userData.id);
-
-    if (updateError) {
+    if (error) {
       return {
         success: false,
         message: "حدث خطأ أثناء تحديث كلمة المرور.",
-        details: updateError.message,
+        details: error.message,
       };
     }
 
@@ -108,4 +91,3 @@ export const updatePassword = async (email, newPassword) => {
     };
   }
 };
-
